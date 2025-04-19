@@ -6,9 +6,7 @@ const conn = async (req, res) =>{
             console.log("Connected");
         });
     } catch (error) {
-        res.status(400).json({
-            message: "Not Connected",
-        });
+        console.error("Not Connected to MongoDB. Error:", error.message);
     }
 };
 conn();
